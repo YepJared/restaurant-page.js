@@ -11,11 +11,11 @@ function buildCompanyInfo() {
     infoContainer.classList.add("info");
 
     const infoHeader = document.createElement("h1");
-    infoHeader.textContent = "Placeholder";
+    infoHeader.textContent = "The Itchy Willow Tavern";
     infoHeader.classList.add("name");
 
     const infoDescription = document.createElement("p");
-    infoDescription.textContent = "This is going to be a blurb about the restaurant.";
+    infoDescription.textContent = "A place for any weary adventurer to rest their swords and grab a pint of ale for an evening of relaxation and merriment. Don't touch the tree.";
 
     infoContainer.append(
         infoHeader,
@@ -26,6 +26,15 @@ function buildCompanyInfo() {
 }
 
 function buildRestaurantHours() {
+    const hoursArray = [
+        "Monday: Sunrise to Sunset",
+        "Tuesday: Sunrise to Sunset",
+        "Wednesday: Closed for pruning",
+        "Thursday: Closed for recovery from pruning",
+        "Friday: Sunrise to Sunset",
+        "Saturday: Sunrise to Sunset",
+        "Sunday: Sunrise to Sunset"
+    ]
     const hoursContainer = document.createElement("div");
     hoursContainer.classList.add("hours");
 
@@ -35,10 +44,10 @@ function buildRestaurantHours() {
     const hourList = document.createElement("ol");
     hourList.classList.add("schedule");
 
-    for (let i = 1; i <= 7; i++) {
+    for (let i = 0; i < hoursArray.length; i++) {
         const day = document.createElement("li");
         day.classList.add("day");
-        day.textContent = i;
+        day.textContent = hoursArray[i];
         hourList.appendChild(day);
     }
 
@@ -58,7 +67,7 @@ function buildRestaurantLocation() {
     locationHeader.textContent = "Address";
 
     const locationText = document.createElement("p");
-    locationText.textContent = "address";
+    locationText.textContent = "2468 Stickless Way";
 
     locationContainer.append(
         locationHeader,
