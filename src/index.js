@@ -11,6 +11,6 @@ function buildUI(builder) {
     contentHolder.append(...builder());
 }
 
-buildUI(buildHomeContent);
+// buildUI(buildHomeContent);
 
 homeButton.addEventListener("click", () => buildUI(buildHomeContent));
